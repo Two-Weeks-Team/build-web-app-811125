@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 210 40% 98%;
+  --foreground: 222 28% 14%;
+  --card: 0 0% 100%;
+  --muted: 216 20% 94%;
+  --border: 217 21% 84%;
+  --primary: 220 73% 45%;
+  --accent: 40 90% 53%;
+  --success: 145 35% 42%;
+  --warning: 35 88% 52%;
+  --radius: 14px;
+  --shadow-soft: 0 10px 30px rgba(18, 33, 56, 0.08);
+  --shadow-pin: 0 6px 12px rgba(25, 39, 58, 0.16);
+}
+
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body {
+  font-family: "Source Sans 3", sans-serif;
+  background:
+    radial-gradient(circle at 10% 20%, rgba(66, 101, 210, 0.12), transparent 35%),
+    radial-gradient(circle at 90% 0%, rgba(240, 175, 48, 0.1), transparent 28%),
+    linear-gradient(to bottom, rgba(255,255,255,0.95), rgba(246,249,252,0.95)),
+    repeating-linear-gradient(0deg, rgba(30, 58, 95, 0.04) 0, rgba(30, 58, 95, 0.04) 1px, transparent 1px, transparent 28px),
+    repeating-linear-gradient(90deg, rgba(30, 58, 95, 0.04) 0, rgba(30, 58, 95, 0.04) 1px, transparent 1px, transparent 28px);
+}
+
+h1,h2,h3,h4 { font-family: "Fraunces", serif; }
+
+@media (prefers-reduced-motion: no-preference) {
+  .fade-in { animation: fadeIn .35s ease-out both; }
+  @keyframes fadeIn { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: none; } }
+}
